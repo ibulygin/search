@@ -11,12 +11,10 @@ body{
     font-family: Roboto;
     line-height: 1.5em;
 }
-body h1{
+.headline{
     color: #F3A862;
 }
-body h2{
-    color: #F3A862;
-}
+
 .container{
     width: 900px;
     padding: 20px;
@@ -30,33 +28,27 @@ body h2{
     flex-direction: column;
     
 }
-.article p,
-.article h1,
-.article h2,
-.article ul,
-.article ol,
-.article table,
-.article blockquote{
+.article_element{
     margin: 20px;
 }
-.article li{
+.article_element_item{
     margin-left: 40px;
 }
 
-.article ul{
+.bulleted_list{
     list-style: none;
 }
-.article ul>li {
+.bulleted_list .article_element_item {
     padding-left: 20px;
     position: relative;
     margin: 10px;
 }
-.article ul > li:before{
+.bulleted_list .article_element_item:before{
     content: '✔';
     position: absolute; top: 0; left: 0;
     color: #F3A862;
 }
-img{
+.icon{
     width: 150px;
     height: 150;
     border: 3px solid #F3A862;
@@ -64,17 +56,16 @@ img{
     margin-top: 15px;
     margin-bottom: 15px;
 }
-img:hover{
+.icon:hover{
     box-shadow: 0 0 10px 5px #F3A862;
 }
 .partner{
-   
     margin-top: 5px;
     display: flex;
     align-content: space-around;
     justify-content: space-around;
 }
-.article table td {
+.table_cell{
     border-bottom: 1px solid#F3A862;
     text-align: center;
     padding: 10px;
@@ -83,14 +74,12 @@ img:hover{
     border-right: 1px solid #F3A862;
 }
 .autor{
-
     display: flex;
     flex-flow: wrap;
     align-content: space-around;
     justify-content: space-between;
     margin-top: 50px;
     margin-bottom: 50px;
-    
 }
 .aboutAutor {
     display: flex;
@@ -114,38 +103,37 @@ img:hover{
     padding-bottom: 20px;
     flex-shrink: 1;
 }
-.form{
+.form_container{
     display: flex;
     justify-content: center;
 }
-.form [name = feedback]{
+.form_container .form{
     display: flex;
     flex-direction: column;
     align-content: space-around;
     justify-content: center;
     margin-top:30px; 
-
 }
-.form [name = feedback]  input,
-.form [name = feedback]  label{
+.form_container .form  .form_input,
+.form_container .form  .form_label{
     width: 600px;
     margin-top: 20px;
-    
 }
-.form [name = feedback]  input{
+.form_container .form  .form_input,
+.form_container .form  .form_submit{
     height: 50px;
     border: 2px solid #F3A862;
     border-radius: 10px;
 }
-.form [name = feedback]  input:hover{
+.form_container .form  .form_input:hover{
     box-shadow: 0 0 10px 5px #F3A862;
 }
-.form input[type=submit] {
+.form_container .form .form_submit {
     background-color: #F3A862;
     color: white;
     width: 100px;
 }
-legend{
+.legend{
     color: #F3A862;
     margin-left: 35%;
     margin-top: 15px;
