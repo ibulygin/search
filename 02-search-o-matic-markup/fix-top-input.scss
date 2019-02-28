@@ -1,0 +1,7 @@
+.fix-top-input {
+    border: none;
+    width: 100%;
+    &:focus {
+        border: none;
+    }
+}

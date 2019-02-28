@@ -1,0 +1,22 @@
+@import "wrapper";
+@import "search-block__field";
+@import "search-block-container";
+@import "search-block__history";
+@import "search-block__result";
+@import "search-block__films";
+@import "search-block";
+@import "search-block__logo";
+@import "footer";
+@import "search-block__field-label__wrapper";
+@import "not-display";
+@import "fix-top";
+@import "fix-top-input";
+@import "body";
+$text-gray: rgba(255, 255, 255, 0.4);
+$background: black;
+$active-serch-color:#FDCE25;
+$unloaded-tile: rgba(255, 255, 255, 0.24);
+* {
+    margin: 0;
+    padding: 0;
+}
