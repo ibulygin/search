@@ -2,11 +2,19 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/codeStyles/codeStyleConfig.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/
+.idea/tfs-frontend-html-homework.iml
+.idea/vcs.xml
+.vscode/settings.json
 
 # Generated files
 .idea/**/contentModel.xml

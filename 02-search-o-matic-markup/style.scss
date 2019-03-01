@@ -12,11 +12,12 @@
 @import "styles/fix-top";
 @import "styles/fix-top-input";
 @import "styles/body";
+
 $text-gray: rgba(255, 255, 255, 0.4);
 $background: black;
-$active-serch-color:#FDCE25;
+$active-serch-color: #FDCE25;
 $unloaded-tile: rgba(255, 255, 255, 0.24);
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }

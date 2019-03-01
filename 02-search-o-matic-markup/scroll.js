@@ -1,10 +1,18 @@
-window.addEventListener('scroll', function() {
-    var element = document.getElementsByClassName('search-block__field');
-    var element2 = document.getElementsByClassName('search-block__field-label__wrapper--input');
-    element[0].classList.add('fix-top');
-    element2[0].classList.add('fix-top-input');
-    if (document.documentElement.scrollTop === 0) {
-        element[0].classList.remove('fix-top');
-        element2[0].classList.remove('fix-top-input')
+window.addEventListener('scroll', function () {
+    const searchBlock = document.querySelector('.search-block__field');
+    const fieldInput = document.querySelector('.search-block__field-label__wrapper--input');
+    const isTopBody = document.documentElement.scrollTop === 0;
+    const searchBlockHasClass = searchBlock.classList.contains("fix-top");
+    const fieldInputHasClass = fieldInput.classList.contains("fix-top-input");
+
+    if (!searchBlockHasClass && !isTopBody && !fieldInputHasClass) {
+        searchBlock.classList.add("fix-top");
+        fieldInput.classList.add("fix-top-input");
     }
+
+    if (isTopBody) {
+        searchBlock.classList.remove('fix-top');
+        fieldInput.classList.remove('fix-top-input')
+    }
+
 })
