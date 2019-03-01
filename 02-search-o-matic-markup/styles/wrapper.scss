@@ -1,0 +1,11 @@
+$text-gray: rgba(255, 255, 255, 0.4);
+$background: black;
+$active-serch-color: #FDCE25;
+$unloaded-tile: rgba(255, 255, 255, 0.24);
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $background;
+  box-sizing: border-box;
+  padding: 0 10px;
+}

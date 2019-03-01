@@ -1,0 +1,23 @@
+@import "styles/wrapper";
+@import "styles/search-block__field";
+@import "styles/search-block-container";
+@import "styles/search-block__history";
+@import "styles/search-block__result";
+@import "styles/search-block__films";
+@import "styles/search-block";
+@import "styles/search-block__logo";
+@import "styles/footer";
+@import "styles/search-block__field-label__wrapper";
+@import "styles/not-display";
+@import "styles/fix-top";
+@import "styles/fix-top-input";
+@import "styles/body";
+
+$text-gray: rgba(255, 255, 255, 0.4);
+$background: black;
+$active-serch-color: #FDCE25;
+$unloaded-tile: rgba(255, 255, 255, 0.24);
+* {
+  margin: 0;
+  padding: 0;
+}

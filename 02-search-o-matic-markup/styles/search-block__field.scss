@@ -1,0 +1,68 @@
+$text-gray: rgba(255, 255, 255, 0.4);
+$background: black;
+$active-serch-color: #FDCE25;
+$unloaded-tile: rgba(255, 255, 255, 0.24);
+.search-block__field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  transition-duration: 0.08s;
+
+  &-label {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+
+    &__wrapper {
+      transition-duration: 0.5s;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &--input {
+        width: 30%;
+        height: 40px;
+        background-image: url("https://cdn1.savepice.ru/uploads/2019/2/26/d90eaf311fc5cebf0b6c5a00ceade906-full.png");
+        background-repeat: no-repeat;
+        border: none;
+        margin: 0 auto;
+        outline: none;
+        font-size: 20px;
+        font-weight: 100;
+        background-color: $background;
+        color: #FFFFFF;
+        padding-left: -60px;
+        transition-duration: 0.5s;
+        border-bottom: 1px solid #FFFFFF;
+        padding-left: 5%;
+        padding-bottom: 1%;;
+
+        &::placeholder {
+          text-align: left;
+
+          &:hover {
+            width: 90%;
+          }
+        }
+
+        &:focus {
+          border-bottom: 1px solid $active-serch-color;
+          width: 100%;
+        }
+      }
+
+      &--img {
+        width: 30px;
+        position: relative;
+        z-index: 90;
+      }
+
+      &--button {
+        margin-left: -2%;
+      }
+    }
+  }
+}

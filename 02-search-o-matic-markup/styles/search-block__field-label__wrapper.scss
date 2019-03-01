@@ -1,0 +1,32 @@
+$text-gray: rgba(255, 255, 255, 0.4);
+$background: black;
+$active-serch-color: #FDCE25;
+$unloaded-tile: rgba(255, 255, 255, 0.24);
+.search-block__field-label__wrapper {
+  button[type="reset"] {
+    display: block;
+    color: black;
+    border: 0;
+    padding: 0 10px;
+    background-color: #fff;
+    outline: none;
+    opacity: 0;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  input:valid ~ button[type="reset"] {
+    display: block;
+    background-color: $background;
+    color: #eee;
+    font-size: 40px;
+    padding: 0;
+    opacity: 1;
+  }
+
+  input:valid {
+    width: 100%;
+  }
+}
