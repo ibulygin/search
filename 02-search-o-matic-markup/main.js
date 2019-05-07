@@ -1,4 +1,4 @@
-import {lisntners} from "../lisntners/lisntners";
-
-const lisntners = lisntners();
-lisntners();
+import {renderSearchFilms} from "./renderSearchFilms.js";
+import {scrollPages} from "./scroll.js";
+scrollPages();
+renderSearchFilms();

@@ -6,7 +6,6 @@
     <title>Search</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="scroll.js"></script>
 </head>
 
 <body>
@@ -15,7 +14,7 @@
         <div class="search-block__logo">
             <img src="image/logo—tp.png" alt="logo" class="search-block__logo--img">
         </div>
-        <form class="search-block__field">
+        <div class="search-block__field">
             <label for="search-field" class="search-block__field-label">
                 <div class="search-block__field-label__wrapper">
                     <input class="search-block__field-label__wrapper--input" type="text" required="required"
@@ -25,7 +24,7 @@
                             title="Click me to clear the input field">&times;
                 </div>
             </label>
-        </form>
+        </div>
         <div class="search-block-container">
             <div class="search-block__history">
                 <div class="search-block__history--item">
@@ -38,20 +37,14 @@
         </div>
     </div>
     <div class="search-block__films">
-        <div class="search-block__films__tile">
-            <img class="search-block__films__tile--content-film" src="image/Rectangle1.png" alt="Форрест гамп">
-            <div class="search-block__films__tile--content-about">
-                <p class="search-block__films__tile--content-about-film">Фиксики</p>
-                <p class="search-block__films__tile--content-about-autor">кКто-то, когда-то</p>
-            </div>
-        </div>
+
     </div>
 </div>
 </div>
 <footer class="footer">
     <p class="footer__text">&#169; 2019 Тинькофф прокат</p>
 </footer>
-<script src="app/lisntners.js"></script>
+<script type="module" src="main.js"></script>
 </body>
 
 </html>
