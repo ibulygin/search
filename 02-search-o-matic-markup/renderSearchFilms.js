@@ -1,7 +1,11 @@
 import {mapMovie} from "./mapMovie.js";
 import {render} from "./render.js";
+import {clearNode} from "./clearNode.js";
+import {renderHistory} from "./render.js";
 
 export const renderSearchFilms = () => {
+    let history = [];
+
     function getFilms(nameFilm)  {
         return fetch('http://www.omdbapi.com/?type=movie&apikey=7ea4aa35&s=' + nameFilm)
             .then(rez => {
@@ -13,7 +17,9 @@ export const renderSearchFilms = () => {
 
             })
             .then((rezu) => {
-                    render(rezu);
+                console.log(rezu.length);
+                numberOfFilms(rezu.length);
+                render(rezu);
                 }
             )
             .catch((e) => {
@@ -23,15 +29,31 @@ export const renderSearchFilms = () => {
 
     };
 
+    function getUnique(input) {
+        return input.filter((item, pos) => input.indexOf(item) === pos);
+    };
+
+    function numberOfFilms(num) {
+        let number = document.querySelector(".search-block__result").innerHTML =`Нашли ${num} фильма`
+    }
+
     function start(){
         document.querySelector(".search-block__field-label__wrapper--input").addEventListener("keydown", function (e) {
+            let conteinerFilms = document.querySelector(".search-block__films");
+            let containerHistory = document.querySelector(".search-block__history");
             if (e.keyCode === 13) {
+                clearNode(containerHistory);
+                clearNode(conteinerFilms);
                 let request = document.querySelector(".search-block__field-label__wrapper--input").value;
+                history.push(request);
+                let err = getUnique(history);
+                renderHistory(err);
                 getFilms(request);
             }
 
         })
     };
+
     return start();
 };
 

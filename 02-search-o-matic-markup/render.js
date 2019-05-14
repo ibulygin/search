@@ -13,3 +13,15 @@ export function render(data){
     });
     container.appendChild(fragment);
 }
+
+export function renderHistory(arr) {
+    let fragment = document.createDocumentFragment();
+    let container = document.querySelector('.search-block__history');
+    arr.forEach((arr) => {
+        let div = document.createElement("div");
+        div.classList.add("search-block__history--item");
+        div.innerHTML = `${arr}`;
+        fragment.appendChild(div);
+    });
+    container.appendChild(fragment);
+}
