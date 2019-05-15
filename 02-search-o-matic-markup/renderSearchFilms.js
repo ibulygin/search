@@ -44,14 +44,27 @@ export const renderSearchFilms = () => {
             if (e.keyCode === 13) {
                 clearNode(containerHistory);
                 clearNode(conteinerFilms);
-                let request = document.querySelector(".search-block__field-label__wrapper--input").value;
-                history.push(request);
+                let request = document.querySelector(".search-block__field-label__wrapper--input");
+                history.push(request.value);
                 let err = getUnique(history);
                 renderHistory(err);
-                getFilms(request);
-            }
+                getFilms(request.value);
 
-        })
+                let arr = document.querySelectorAll(".search-block__history--item");
+                if(arr.length){
+                    Array
+                        .from(arr)
+                        .forEach((element) => {
+                            this.element = element;
+                            console.log(element.innerText);
+                            element.addEventListener("click", () => {
+                                document.querySelector(".search-block__field-label__wrapper--input").value = element.innerText;
+                        })})
+                };
+            };
+        });
+
+
     };
 
     return start();
