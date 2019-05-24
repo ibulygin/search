@@ -1,7 +1,9 @@
-import {mapMovie} from "./mapMovie.js";
+import {mapMovie} from "../helpers/mapMovie.js";
 import {render} from "./render.js";
-import {clearNode} from "./clearNode.js";
+import {clearNode} from "../helpers/clearNode.js";
 import {renderHistory} from "./render.js";
+import {getUnique} from "../helpers/getUnique.js";
+import {numberOfFilms} from "../helpers/numberOfFilms.js";
 
 export const renderSearchFilms = () => {
     let history = [];
@@ -28,14 +30,6 @@ export const renderSearchFilms = () => {
             });
 
     };
-
-    function getUnique(input) {
-        return input.filter((item, pos) => input.indexOf(item) === pos);
-    };
-
-    function numberOfFilms(num) {
-        let number = document.querySelector(".search-block__result").innerHTML =`Нашли ${num} фильма`
-    }
 
     function start(){
         document.querySelector(".search-block__field-label__wrapper--input").addEventListener("keydown", function (e) {
@@ -69,4 +63,3 @@ export const renderSearchFilms = () => {
 
     return start();
 };
-
